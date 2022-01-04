@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 continuada</title>
+</head>
+
+<body>
+    codigo do produto: <input id="codigos"> <br>
+    nome do produto: <input id="produtos"> <br>
+    quantidade em estoque: <input id="quantidades"> <br>
+    <button onclick="salvar()"> salvar produto</button>
+    <button onclick="ver()"> ver estoque </button> <br>
+    <span id="texto"></span>
+</body>
+
+</html>
+<script>
+    var vetor1 = []
+    var vetor2 = []
+    var vetor3 = []
+    function salvar() {
+        var codigo = Number(codigos.value)
+        var produto = produtos.value
+        var quantidade = Number(quantidades.value)
+     
+
+        if (codigo == "") {
+            alert(
+                "codigo invalido para o produto"
+            )
+        }
+        if (produto == "") {
+            alert(
+                "nome invalido para o produto"
+            )
+        }
+        if (quantidade <= 0) {
+            alert(
+                "quantidade invalida para o produto"
+            )
+        } else {
+            vetor1.push(codigo)
+            vetor2.push(produto)
+            vetor3.push(quantidade);
+            alert("cadastro feito com sucesso")
+
+
+        }
+
+        texto.innerHTML = ""
+        for (var i = 0; i < vetor1.length; i++) {
+            if (codigo == vetor1[i]) {
+              
+                alert(`ò codigo ${codigo} ja existe`);
+                vetor3[i] = vetor3[i] + quantidade
+            }
+
+        }
+
+    }
+    function ver() {
+        texto.innerHTML += `codigo:${vetor1[vetor1.length - 1]}<br>
+        nome:${vetor2[vetor2.length - 1]}<br>
+        quantidade:${vetor3[vetor3.length - 1]}<br>`
+    }
+</script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula</title>
+</head>
+<body>
+   cliente <input id="nome"> <br>
+    <select id="frutas">
+    <option value="0">_</option>
+    <option value="15">abacaxi</option>
+    <option value="0,5">tomate</option>
+    <option value="2">laranja</option>
+    </select> <br>
+    <select id="bebidas">
+
+    <option value="0">_</option>
+    <option value="40">gin</option>
+    <option value="20">vodka</option>
+    <option value="10">energetico</option>
+    <option value="100">WHISKE</option>
+    </select><br>
+    <button  onclick="custo()">total</button><br>
+    <div id="texto"></divv>
+
+   
+</body>
+</html>
+<script>
+function custo() {
+var A = frutas.value;
+var B = bebidas.value;
+var C = nome.value
+var D = Number(A) + Number(B);
+texto.innerHTML= ` o cliente ${C} pediu uma FRUTA DE ${B} com  UMA BEBIDA DE ${A} e ficara ${D} A CONTA A PAGAR`;
+
+
+
+
+
+
+}
+
+
+
+
+
+</script>

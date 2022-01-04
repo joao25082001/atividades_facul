@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vetor 5</title>
+</head>
+<body>
+    nome dos alunos: <input id="nome"> <br>
+    <button onclick="cadastrar()">cadastrar</button>
+    <div id="div_alunos"></div>
+    
+
+</body>
+</html>
+<script>
+          var lista_alunos=[]
+    function cadastrar (){
+      
+        var alunos = nome.value;
+        lista_alunos.push(alunos);
+        
+         div_alunos.innerHTML = ""
+        
+        for(var contador =0;contador < lista_alunos.length;contador++){
+           
+                
+            div_alunos.innerHTML +=`${lista_alunos[lista_alunos.length - contador]}<br>` 
+            }
+       
+        
+    }
+            
+        
+    
+</script>

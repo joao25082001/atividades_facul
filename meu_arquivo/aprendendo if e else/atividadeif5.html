@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="PT">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    me fale suas notas <br>
+    <input id="mat"> <br>
+    <input id="port"> <br>
+    <input id="ciencias"> <br>
+    <button onclick="BUTAO()">média</button>
+    <span id="texto"> </span>
+</body>
+</html> <script>
+    function BUTAO() {
+ var a= Number(mat.value);
+ var b= Number(port.value);
+ var c= Number(ciencias.value);
+ var notas = (a+b+c)/3;
+ var d = Number(notas)
+ var e = ""
+ if(d>=9.4){e= "parabens, voce é fora de serie!"}
+ texto.innerHTML= `sua média foi ${d.toFixed(2)}${e};`
+
+    }
+
+
+
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Selecione o time:
+    <select id="lista_times">
+        <option
+            value="img src='https://th.bing.com/th/id/OIP.5s5FbWMH9afq6OJFpp_zYwHaHa?pid=ImgDet&rs=1' ">
+            palmeiras</option>
+       
+        <option
+            value="<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Santos_logo.svg/1864px-Santos_logo.svg.png'>">
+            Santos</option>
+        <option value="<img src='https://rciararaquara.com.br/wp-content/uploads/2019/05/ferroviaria_escudo.jpg'>">
+            Ferroviária</option> </select>
+            <button onclick="ver_escudo()">escudos</button>
+            <div id=escudos></div>
+            <img src="" id="imagem_escudo_time">
+        </div>
+</body>
+</html>
+<script>
+ function ver_escudo() {
+  imagem_escudo_time.src = lista_times.value;
+ // escudos.innerHTML: imagem_escudo_time;
+
+
+}
+
+
+
+</script>

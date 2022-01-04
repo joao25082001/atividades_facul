@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Você já clicou <span id="span_contagem">10</span> vezes
+    <br>
+    <button onclick="aumentar_1()">Aumentar em 1</button>
+    <button onclick="aumentar_2()">Aumentar em 2</button>
+</body>
+
+</html>
+
+<script>
+
+    var numero = 10;
+    function aumentar_1() {
+        numero++;
+        // numero += 1;
+        // numero = numero + 1;
+        span_contagem.innerHTML = numero;
+    }
+
+    function aumentar_10() {
+        numero += 10;
+        // numero = numero + 10;
+        span_contagem.innerHTML = numero;
+    }
+
+    function diminuir_1() {
+        numero--;
+        span_contagem.innerHTML = numero;
+    }
+
+    function diminuir_10() {
+        numero -= 10;
+        // numero = numero - 10;
+        span_contagem.innerHTML = numero;
+    }
+
+    function multiplicar_10() {
+        numero *= 10;
+        // numero = numero * 10;
+        span_contagem.innerHTML = numero;
+    }
+
+    function potencia() {
+        numero = numero ** 10;
+        span_contagem.innerHTML = numero;
+    }
+
+    function divisao() {
+        numero = numero / 10;
+        // numero /= 10;
+        span_contagem.innerHTML = numero;
+    }
+
+</script>

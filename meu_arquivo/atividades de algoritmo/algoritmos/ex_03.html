@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Votos candidato A: <input id="input_votos_A"> <br>
+    Votos candidato B: <input id="input_votos_B"> <br>
+    Votos em Branco: <input id="input_votos_BRANCO"> <br>
+    Votos nulos: <input id="input_votos_NULOS"> <br>
+    <button onclick="resultado_eleicao()"> Resultado eleição </button>
+    <br>
+    <br>
+    <div id="div_resultado" style="display: none">
+        Total de votos: <span id="span_total_votos"></span> <br>
+        Candidato A: <span id="span_porcentagem_a"></span> % (<span id="span_votos_a"></span> votos) <br>
+
+        <div id="barra_candidato_a" style="background-color: green; height: 30px; width: 0%"></div>
+
+        <br>
+        Candidato B: <span id="span_porcentagem_b"></span> % (<span id="span_votos_b"></span> votos) <br>
+
+        <div id="barra_candidato_b" style="background-color: red; height: 30px; width: 0%"></div>
+
+        <br>
+        Inválidos: <span id="span_porcentagem_invalidos"></span> % (<span id="span_votos_invalidos"></span> votos) <br>
+
+        <div id="barra_invalidos" style="background-color: gray; height: 30px; width: 0%"></div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    function resultado_eleicao() {
+        var VOTOS_A = Number(input_votos_A.value);
+        var VOTOS_B = Number(input_votos_B.value);
+        var VOTOS_BRANCO = Number(input_votos_BRANCO.value);
+        var VOTOS_NULOS = Number(input_votos_NULOS.value);
+
+        var VOTOS_INVALIDOS = VOTOS_BRANCO + VOTOS_NULOS;
+        var TOTAL_VOTOS = VOTOS_A + VOTOS_B + VOTOS_BRANCO + VOTOS_NULOS;
+
+        var PORCENTAGEM_A = VOTOS_A * 100 / TOTAL_VOTOS;
+        var PORCENTAGEM_B = (VOTOS_B * 100 / TOTAL_VOTOS);
+        var PORCENTAGEM_INVALIDOS = (VOTOS_INVALIDOS * 100 / TOTAL_VOTOS);
+
+        span_total_votos.innerHTML = TOTAL_VOTOS;
+        span_porcentagem_a.innerHTML = PORCENTAGEM_A.toFixed(2);
+        span_votos_a.innerHTML = VOTOS_A;
+        span_porcentagem_b.innerHTML = PORCENTAGEM_B.toFixed(2);
+        span_votos_b.innerHTML = VOTOS_B;
+        span_porcentagem_invalidos.innerHTML = PORCENTAGEM_INVALIDOS.toFixed(2);
+        span_votos_invalidos.innerHTML = VOTOS_INVALIDOS;
+
+        barra_candidato_a.style.width = `${PORCENTAGEM_A}%`;
+        barra_candidato_b.style.width = `${PORCENTAGEM_B}%`;
+        barra_invalidos.style.width = `${PORCENTAGEM_INVALIDOS}%`;
+
+        div_resultado.style.display = "block";
+
+    }
+
+</script>

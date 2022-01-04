@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div>
+        <!-- EXEMPLO LIMPO DE CADASTRO UTILIZADO NO SITE INSTITUCIONAL -->
+
+        <!-- formulário de cadastro com as inputs e a identificação -->
+        <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
+            <input name="nome" placeholder="Digite seu nome">
+            <input name="email" placeholder="Digite seu email">
+            <input name="senha" placeholder="Digite sua senha">
+            <button>Cadastrar</button> 
+            <!-- ao clicar no botão ele corresponde a chamada da função cadastrar do onSubmit do meu form  -->
+        </form>
+    </div>
+</body>
+</html>
+
+
+<script>
+    function cadastrar() {
+        //pegando formulario e formatando para os tipos de objeto que ele aceita
+        var formulario = new URLSearchParams(new FormData(document.getElementById("form_cadastro"))); 
+
+        fetch("/usuarios/cadastrar", { //acessando rota de cadastro do usuário
+            method: "POST", //enviando a requisição com metodo post para poder enviar body
+            body: formulario //enviando através do body (corpo da requisição) o objeto formulário com as chaves e valores das inputs
+        }).then(function (resposta) { //esse "resposta" pode ser qualquer nome mas será a variavel que devolve a resposta do que foi requisitado
+            console.log("resposta: ", resposta); //printando a resposta completa no console log
+        }).catch(function (erro) { //esse "erro" pode ser qualquer nome mas será a variavel que devolve a resposta com erro do que foi requisitado
+            console.log(`#ERRO: ${erro}`); //exibe a mensagem de erro no console
+        });
+
+        return false;
+    }
+</script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--  Um grupo de amigos costuma (ou costumava, antes do Covid19) se reunir
+         na casa de um deles para pedir e comer pizza. Só que eles tinham
+          um trato de que o valor da pizza deveria ser um que, quando dividido entre
+           os amigos, não passe de 20,00 por pessoa. Ajude eles criando um programa em HTML/JS o qual:
+
+a) Pergunte o valor da pizza;
+
+b) Pergunte a quantidade de amigos reunidos;
+
+c) Ao clicar em "Rola a pizza?", calcule e exiba o valor que cada amigo vai pagar na pizza com uma frase na página como esta "Cada amigo vai pagar R$X pela pizza";
+
+d) Caso o valor por amigo passe de R$20,00, exiba também a frase "Deu ruim! Pizza muito cara!"; -->
+valor da pizza <input id="valortotal">
+quantidade de amigos <input id="divisao">
+
+<button onclick="compra()">rola a pizza?</button>
+<div id="div"></div>
+</body> 
+
+
+</html>
+<script>
+    function compra() {
+        var pizza = Number(valortotal.value);
+        var amigos = Number(divisao.value);
+        var total = Number(pizza) / Number(amigos);
+        if (total <= 20) {
+             div.innerHTML = `bora pizza` }
+             else{
+             div.innerHTML = `deu ruim,pizza cara demais` }
+             ;
+             }
+       
+    
+
+
+
+
+</script>

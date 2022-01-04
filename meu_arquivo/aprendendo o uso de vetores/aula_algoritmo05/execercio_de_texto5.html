@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>b</title>
+</head>
+<body>
+    seu nome: <input id="nome" onkeyup="funcao()"> <br>
+    <span id="span"></span>
+
+</body>
+<!--  -->
+</html>
+<script>
+    function funcao() {
+        var certo = nome.value;
+        var fim = certo.trimStart();
+        var comeco = certo.trimEnd();
+        if (certo != fim) { span.innerHTML = "Invalido" }
+        else if (certo != comeco) { span.innerHTML = "invalido" }
+        else { span.innerHTML = "valido" }
+        if (certo.indexOf("fogo")>-1) {span.innerHTML="com fogo nao se brinca"}
+        else {span.innerHTML="invalido"}
+            
+        
+    }
+</script>

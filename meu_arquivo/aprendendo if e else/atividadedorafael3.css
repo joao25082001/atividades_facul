@@ -1,0 +1,26 @@
+#div { 
+    background-color: #bcbd7c;
+    width: 400px;
+    height:300px;
+    }
+    .divfilhaA{ 
+        background-color:#47113d;
+        height: 45%;
+        width: 89%;
+    
+    }
+    div{
+        color: rgb(163, 9, 104);
+        background-color:pink;
+        font-size: 555;
+        font-family:initial;
+        font-weight: 500;
+    
+    }
+    #div2{
+        width: 60%; height:55vh;background-color:rgb(175, 28, 28);
+    }
+        .div2b {width: 55vw; height:60%; background-color:rgb(53, 13, 199);
+    
+    
+        }

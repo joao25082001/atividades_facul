@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="PT">
+
+
+
+
+<head>
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+
+<body>
+    frequencia do aluno <input id="frequencia"> <br>
+    <button onclick="botao()">analisar frequencia</button>
+    <div id="div"> </div>
+    </div>
+</body>
+
+</html>
+<script>
+    function botao() {
+
+        var a = Number(frequencia.value)
+        if (a >= 50) { div.innerHTML = `<img src="http://batistabarcelona.com.br/wp-content/uploads/2016/07/3964203448-aluno-estudando-em-casa1.jpg">` }
+        else { div.innerHTML = `<img src="https://tse3.mm.bing.net/th?id=OIP.0NKq_G2gupUYp5hhn-GGwwHaHa&pid=Api&P=0&w=300&h=300">` }
+    }
+</script>

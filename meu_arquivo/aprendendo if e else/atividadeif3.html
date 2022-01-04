@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    quantos filhos voce tem <input id="qntfilhos">   <br>
+    <button onclick="verificar()">verificar situação</button><br>
+<div id="texto1";><div>
+
+
+</body>
+</html> <script>
+function verificar() {
+var qnt= Number(qntfilhos.value);
+var a= Text.value;
+if(qnt == 0){a="sem decendentes"};
+
+if(qnt == 1){a="filho unico"};
+if(qnt >= 2){a="crescei e multiplicai-vos"};
+texto1.innerHTML=`${a}`
+
+}
+
+
+</script>

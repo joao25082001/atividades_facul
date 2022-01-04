@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    nome do aluno <input id="inputnome"> 
+    idade do aluno  <input id="inputidade">
+    <br>
+    <button onclick="avaliar_aluno()">avaliar aluno</button>
+    <div  id="div_mensagem"></div>
+
+</body>
+</html> <script>
+function avaliar_aluno(){
+ var nomealuno = inputnome.value;
+ var idadealuno = Number(inputidade.value);
+ var a =  idadealuno * 100/18
+ if(idadealuno >=18){div_mensagem.innerHTML= `${nomealuno} VAMOS TIRAR A CNH`;}
+ else{div_mensagem.innerHTML= `voce precisa ficar mais velho em ${a.toFixed(2)}%`} ;
+
+
+}</script>

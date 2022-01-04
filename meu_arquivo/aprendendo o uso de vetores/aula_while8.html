@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 8. Crie um programa em HTML/JS o qual:
+
+a) Receber um número (tem que estar entre 0 e 200)
+
+b) Ter um botão chamado "Viva o 7!"
+
+c) Ao clicar nesse botão, devem aparecer todos os múltiplos de 7 entre 0 e o número informado em a)
+
+d) ATENÇÃO! Use a técnica de dedução de múltiplos por uso do resto da divisão
+ e não usando a técnica de incrementar em 7. Para saber se um número é múltip0lo 
+de 7, basta descobrir se o resto da divisão dele por 7 é 0. -->
+    informe o numero: <input id="number"> <br>
+
+    <button onclick="butao()">viva a 7</button> <br>
+    <span id="texto"></span>
+</body>
+
+</html>
+<script>
+    function butao() {
+        var numero = Number(number.value)
+
+        if (numero >= 0 && numero <= 200) {
+            var contador = 0
+            while (contador <= contador) {
+                if (contador % 7 == 0) {
+                    texto.innerHTML += `${contador} <br>`
+                }
+                contador = contador + 1;
+            }
+        } else {
+            alert("numero invalido");
+        }
+    }
+</script>

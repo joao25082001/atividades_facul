@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vetor 7</title>
+</head>
+<body>
+    cadastrar : <input id="cadastrar">
+
+   <button onclick="pesquisar()">pesquisar</button>
+    <button onclick="botao()">botao</button> <br>
+    <div id="texto"></div>
+</body>
+</html>
+<script>
+var vetor=[]
+function botao(){
+    var input = cadastrar.value
+    
+    vetor.push(input)
+    texto.innerHTML=""
+    for(var i = 0;i < vetor.length; i ++)
+    {texto.innerHTML= `${vetor}<br>`}
+     
+} 
+function pesquisar(){
+    var input= cadastrar.value
+
+    
+if (input <= vetor[vetor.length-1]){ for(var i = 0;input ==vetor[vetor.length -1];i ++){
+    texto.innerHTML=
+}
+    }
+
+}
+</script>

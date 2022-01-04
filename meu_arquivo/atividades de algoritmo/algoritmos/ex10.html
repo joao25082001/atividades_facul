@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    numero <input type="text" name="" id="numero1">
+    analise <button onclick="analise()">analisar historico</button> <br>
+    <span id="texto"></span> <br>
+    <span id="maiornumero"></span>
+    <span id="menornumero"></span>
+</body>
+
+</html>
+<script>
+    var vetor = []
+
+    function analise() {
+        var numero = Number(numero1.value)
+        var menor = vetor[0]
+        var maior = vetor[0]
+
+        vetor.push(numero)
+        texto.innerHTML = ""
+        for (i = 0; i < vetor.length; i++) { texto.innerHTML += `${vetor[i]}<br>`
+        if (vetor[i] < menor) {
+            menor = vetor[i]
+        }
+        if (vetor[i] > maior) {
+             maior= vetor[i]
+        }
+        maiornumero.innerHTML = `maior= ${maior}`
+    menornumero.innerHTML = `menor= ${menor}`
+    }
+    
+}
+</script>

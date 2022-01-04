@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a</title>
+</head>
+
+<body>
+    insira seu email: <input id="email" onkeyup="digitos()">
+    é valido?:<div id="div_email"></div>
+</body>
+
+</html>
+<script>
+    function digitos() {
+        /*
+        O indexOf nos permitirá verificar se uma letra, palavra ou
+        parte de texto aparece em determinado texto;
+
+        Ele sempre retornará um número, sendo -1 quando não existe
+        e pelo menos 0 quando existe o valor no texto;
+
+        Esse número que ele retorna é a posição da palavra, frase
+        ou parte do texto.
+    */
+        var certo = email.value;
+        if(
+            certo.indexOf("@")> - 1) {
+                if(
+            certo.indexOf(".") >- 1) {
+                if(
+            certo.length >=7){
+                div_email.innerHTML= "valid"
+            }
+            }   
+            }
+                else{div_email.innerHTML="invalidado"}
+    }
+</script>

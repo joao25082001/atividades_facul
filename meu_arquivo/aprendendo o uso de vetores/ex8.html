@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    cadsastre as notas: <input id="nota">
+    <button onclick="cadastrar()">cadastrar nota</button> <br>
+    <div id="span"></div>
+    intervalo de notas : <br>
+    menor:<input id="menor">
+    maior:<input id="maior">
+    <button onclick="rever_notas()"> rever_notas</button>
+    <div id="texto"></div>
+    <div id="span"></div>
+
+</body>
+
+</html>
+<script>
+    var vetor = []
+    
+    function cadastrar() {
+        var notas = Number(nota.value);
+        vetor.push(notas)
+
+
+    }
+    function rever_notas() {
+        var a = Number(menor.value)
+        var b = Number(maior.value);
+        var acumulador = 0
+
+
+
+        texto.innerHTML = ""
+        for (var i = 0; i < vetor.length; i++) {
+            if (vetor[i] >= a && vetor[i] <= b) {
+                texto.innerHTML += `${vetor[i]}<br>`;
+                 if(i < vetor.length){
+                 acumulador = acumulador + vetor[i]/vetor.length
+                }
+         
+            }
+        }
+
+            texto.innerHTML = `Foram cadastras ${vetor.length}notas que estão no intervalo de 
+                  ${a} até ${b} e a média dessas notas é ${acumulador}`}
+
+        
+
+    
+
+
+</script>

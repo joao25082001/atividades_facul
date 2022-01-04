@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    cadastrar pais:<input id="cadastro_pais"> <br>
+    cadastrar população: <input id="cadastro_população"> <br>
+    cadastrar liberdade economica: <input id="liberdade"> <br>
+    <button onclick="cadastrar()">cadastro</button> <br>
+    <button onclick="analisar()">analise</button> <br>
+    <span id="texto"></span>
+
+</body>
+
+</html>
+
+<script>
+    var vetor_pais = []
+    var vetor_população = []
+    var vetor_econimica = []
+    function cadastrar() {
+        var pais = cadastro_pais.value;
+        var população = Number(cadastro_população.value);
+        var economica = Number(liberdade.value);
+
+
+        if (
+            população < 1000 || economica < 0 || economica > 100) {
+            alert("valores invalidos")
+        }
+        else {
+            vetor_econimica.push(economica),
+                vetor_pais.push(pais),
+                vetor_população.push(população)
+        }
+    }
+    function analisar() {
+        var a = ""
+        var desemprego = 0
+        var idh = 0
+        var porcentagem = ""
+        texto.innerHTML = ""
+        for (var i = 0; i < vetor_econimica.length; i++) {
+            if (vetor_econimica[i] > 80 && vetor_econimica[i] < 100) {
+                 a = "livre"
+            }
+            else if (vetor_econimica[i] > 70 && vetor_econimica[i] < 80) {
+                 a = "quase livre"
+            }
+            else if (vetor_econimica[i] > 60 && vetor_econimica[i] < 70) {
+                 a = "moderadamente livre"
+            }
+            else if (vetor_econimica[i] > 50 && vetor_econimica[i] < 60) {
+                 a = "quase reprimido"
+            }
+            else if (vetor_econimica[i] > 0 && vetor_econimica[i] < 50) {
+                 a = "reprimido"
+            }
+      
+             if (a == "livre") {
+                 desemprego = (vetor_população[i] / 100) * 5;  idh = 0.85;
+                 porcentagem = 5
+            }
+            else if (a == "quase livre") {
+                 desemprego = (vetor_população[i] / 100) * 7;  idh = 0.77;
+                 porcentagem = 7
+            }
+            else if (a == "moderadamente livre") {
+                 desemprego = (vetor_população[i] / 100) * 8;  idh = 0.74
+                 porcentagem = 8
+            }
+            else if (a == "quase  reprimido") {
+                 desemprego = (vetor_população[i] / 100) * 15;  idh = 0.65
+                 porcentagem = 15
+            }
+            else if (a == "reprimido") {
+                 desemprego = (vetor_população[i] / 100) * 22;  idh = 0.60
+                 porcentagem = 22
+            }
+            texto.innerHTML +=
+      `pais:${vetor_pais[i]}<br>
+       categoria:${a}<br>
+       habitantes:${vetor_população[i]}<br>
+       medio provavel:${idh}<br>
+       Desemprego médio provável: ${porcentagem}%, ou seja, talvez ${desemprego} estejam sem emprego<br>`
+
+        }
+      
+
+
+    }
+</script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ bebida
+    <select id="select_lista_bebida">
+        <option value="0">_</option>
+        <option value ="2">agua</option>
+        <option value ="6">refrigerante</option>
+        <option value ="4">cerveja</option>
+        </select> <br>
+
+        comida
+        <select id="select_lista_comida">
+            <option value="0">_</option>
+            <option  value ="5">salada</option>
+            <option value ="15">feijoada</option>
+            <option value ="10">bife</option>
+            <option value ="7">peixe</option>
+            </select> <br>
+            nome clientes <input id="nome_cliente">
+        <button onclick ="custo_total()">preço total</button>
+        <div id="mensagem"></div>
+        
+
+        
+</body>
+</html>
+<script>
+
+    function custo_total() {
+var c= nome_cliente.value;
+var a= select_lista_comida.value;
+var b= select_lista_bebida.value;
+var total = Number(a) + Number(b);
+
+
+
+
+mensagem.innerHTML=` Olá,${c} o Seu almoço vai custar um total de ${total}`;
+
+
+
+    }
+</script>

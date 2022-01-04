@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--. Crie um pequeno sistema de avaliação de atendimento em HTML/JS o qual:
+a) Tem cinco botões: "Nota 1", "Nota 2", "Nota 3", "Nota 4" e "Nota 5";
+b) Abaixo deles, um texto: "Sua avaliação:";
+c) Cada vez que o usuário for clicando em um dos botões, é atualizada a média de todas as avaliações recebidas, e o texto em b) se atualiza para algo como "Sua avaliação: 3.4" (use sempre 1 casa decimal);
+d) De acordo com a média atual, exiba ou altere uma figura abaixo de tudo, que pode ser:
+    De alguém chorando ou desesperado, caso a média esteja abaixo de 2.
+    De alguém "neutro", caso a média esteja entre 2 e 3.
+    De alguém feliz, caso a média seja entre mais de 3 e 4.5.
+    De radiante, mega feliz, caso a média esteja acima de 4.5.  -->
+</head>
+
+<body>
+    <button onclick="botao1()">nota1</button>
+    <button onclick="botao2()">nota2</button>
+    <button onclick="botao3()">nota3</button>
+    <button onclick="botao4()">nota4</button>
+    <button onclick="botao5()">nota5</button>
+    sua avaliacao:<span id="notas">0</span>
+
+</body>
+
+</html>
+<script>
+    var cliques = Number(notas.innerHTML)
+    var valor = Number(notas.innerHTML)
+
+
+    function botao1() {
+        valor += 1
+        cliques += 1
+        var media = valor / cliques;
+        notas.innerHTML = media
+        if(media<=2){notas.innerHTML=`chorando`}
+        else if(media<=3){notas.innerHTML=`neutro`}
+        else if (media<=4.5){notas.innerHTML=`feliz`}
+        else {notas.innerHTML=`radiante`}
+
+
+    }
+    function botao2() {
+        valor += 2
+        cliques += 1
+        var media = valor / cliques;
+        notas.innerHTML = media
+        if(media<=2){notas.innerHTML=`chorando`}
+        else if(media<=3){notas.innerHTML=`neutro`}
+        else if (media<=4.5){notas.innerHTML=`feliz`}
+        else {notas.innerHTML=`radiante`}
+    }
+    function botao3() {
+        valor += 3
+        cliques += 1
+        var media = valor / cliques;
+        notas.innerHTML = media
+        if(media<=2){notas.innerHTML=`chorando`}
+        else if(media<=3){notas.innerHTML=`neutro`}
+        else if (media<=4.5){notas.innerHTML=`feliz`}
+        else {notas.innerHTML=`radiante`}
+    }
+    function botao4() {
+        valor += 4
+        cliques += 1
+        var media = valor / cliques;
+        notas.innerHTML = media
+        if(media<=2){notas.innerHTML=`chorando`}
+        else if(media<=3){notas.innerHTML=`neutro`}
+        else if (media<=4.5){notas.innerHTML=`feliz`}
+        else {notas.innerHTML=`radiante`}
+
+    }
+    function botao5() {
+        valor = 5
+        cliques = +1
+        var media = valor / cliques;
+        notas.innerHTML = media
+        if(media<=2){notas.innerHTML=`chorando`}
+        else if(media<=3){notas.innerHTML=`neutro`}
+        else if (media<=4.5){notas.innerHTML=`feliz`}
+        else {notas.innerHTML=`radiante`}
+    }
+
+
+
+
+
+
+
+</script>

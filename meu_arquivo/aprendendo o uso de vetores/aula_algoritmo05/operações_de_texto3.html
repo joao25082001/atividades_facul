@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 3. Para ver uma versão de um texto sem os espaços em branco do 
+        início, usamos a função .trimStart(). Para ver uma versão de um texto sem os espaços 
+        em branco do final, usamos a função .trimEnd(). Crie um programa em HTML/JS o qual:
+
+a) Solicite o nome do usuário
+
+b) Enquanto ele digita, exiba abaixo se é um nome válido ou não.
+
+c) Considere que o nome é obrigatório (ou seja, não pode ser vazio, descartando-se espaços em branco que
+ não sejam para separar as palavras). Em caso de nome válido, exiba na página "Nome OK".
+  Caso contrário, exiba "Nome deve se informado!" -->
+    seu nome: <input id="nome" onkeyup="funcao()"> <br>
+    <span id="span"></span>
+
+</body>
+
+</html>
+<script>
+    function funcao() {
+        var certo = nome.value;
+        var fim = certo.trimStart();
+        var comeco = certo.trimEnd();
+        if (certo != fim) { span.innerHTML = "Invalido" }
+        else if (certo != comeco) { span.innerHTML = "invalido" }
+        else { span.innerHTML = "valido" }
+    }
+</script>

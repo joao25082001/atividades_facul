@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    linhas que voce anda: <input id="linhas">
+    <button onclick="botao()">gravar busao</button> <br>
+    <button onclick="pesquisar()">pesquise</button>
+    <span id= texto></span>
+   <span id= texxto></span>
+</body>
+</html>
+<script>
+    var vetor=[]
+    function botao(){
+        var a = linhas.value
+        var contagem= 0;
+        var posição = posição + 1
+        var teste = posição
+        vetor.push(a)
+        texto.innerHTML= ""
+        for(var i = 0; i < vetor.length; i ++)
+        {texto.innerHTML += `${vetor[i]}<br>`}
+    }
+    function pesquisar(){
+        var a = linhas.value;
+        var teste= true
+        for(var i = 0; i < vetor.length; i ++)
+        if(vetor[i]== a){
+         contagem= contagem + 1
+ 
+        }
+        texxto.innerHTML =`voce pegou esse terminal${contagem}`
+    }
+
+</script>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    premiação total: <input id="premiação"><br>
+    Numero maximo de rodadas<input id="rodadas"> <br>
+    A:<select id="a">
+        <option value="3">vitoria</option>
+        <option value="1">empate</option>
+        <option value="0">derrota</option>
+
+    </select> <br>
+    B:<select id="b">
+        <option value="3">vitoria</option>
+        <option value="1">empate</option>
+        <option value="0">derrota</option>
+    </select> <br>
+    C: <select id="c">
+        <option value="3">vitoria</option>
+        <option value="1">empate</option>
+        <option value="0">derrota</option>
+    </select> <br>
+
+    <button onclick="realizar()">realizar</button>
+    <button onclick="revelar()">revelar premiação</button> <br>
+    rodada atual: <span id="aumento">0</span> <br>
+    time1: <span id="texto1"></span> <br>
+    time2: <span id="texto2"></span> <br>
+    time3: <span id="texto3"></span> <br>
+    porcentagem time A:<span id="porcentagem1"></span> <br>
+     porcentagem TIME B<span id="porcentagem2"></span> <br>
+     PORCENTAGEM TIME C<span id="porcentagem3"></span> <br>
+</body>
+
+</html>
+<script>
+    var time1 = 0;
+    var time2 = 0;
+    var time3 = 0;
+    function realizar() {
+
+    var premiar = Number(premiação.value);
+    var partidas = Number(rodadas.value);   
+    time1 = time1+ Number(a.value)
+    time2 = time2 + Number(b.value)
+    time3 = time3 + Number(c.value)
+
+            if (premiar < 1000 || partidas < 1) {
+            alert("valor dos dados invalidos");
+        }
+        texto1.innerHTML =+`${time1.toFixed(2)}`;
+        texto2.innerHTML =+ `${time2.toFixed(2)}`;
+        texto3.innerHTML =+ `${time3.toFixed(2)}`;
+        aumento.innerHTML =+ aumento.innerHTML + 1;
+        
+
+    }
+    function revelar() {
+        // porcentagem1.innerHTML=+`${Number(texto1.innerHTML)}+ ${Number(texto2.innerHTML)}`
+         porcentagem2.innerHTML=+`${((time1+time2+time)*100)/time2}` 
+        porcentagem3.innerHTML=+`${((time1+time2+time)*100)/time3}`
+    }
+
+        </script>

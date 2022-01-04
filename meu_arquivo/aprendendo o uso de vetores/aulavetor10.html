@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 10. Crie um programa no qual:
+
+a) Tenha um campo "Digite um número qualquer".
+
+b) Tenha um botão "Analisar histórico". Ao clicar nele, o número é cadastrado em algum lugar e, em seguida, deve aparecer um histórico dos números cadastrados, bem como o maior e o menor, como no exemplo a seguir:
+
+   1º Número: 15
+
+   2º Número: 22
+
+   3º Número: 19
+
+   4º Número: 5
+
+   Maior: 22
+
+   Menor: 5 -->
+
+    digite um numero <input id="numero">
+    <button onclick=butao()> botao</button> <br>
+    <span id="texto"></span> 
+    Maior: <span id="maior_numero"></span> <br>
+    menor: <span id="menor_numero"><span> <br>
+</body>
+
+</html>
+<script>
+    var vetor = []
+    function butao() {
+        var a = numero.value
+        vetor.push(a)
+        var maior =vetor[0]
+        var menor =vetor[0]
+        texto.innerHTML = ""
+        for (i = -1; i < vetor.length; i++) {
+            texto.innerHTML = `${vetor}<br>`
+           
+            if (vetor[i] >= maior) {
+                maior = vetor[i];
+                maior_numero.innerHTML = `${maior}`
+               
+            }
+             if (vetor[i] <= menor) {
+                 menor = vetor[i];
+                 menor_numero.innerHTML = `${menor}`
+               
+             }
+
+        }
+      
+    }
+
+
+
+</script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <!-- 10. Crie um programa em HTML/JS o qual:
+
+a) Solicite ao usuário a quantidade de títulos mundiais da FIFA que seu clube tem
+
+b) Ao clicar num botão "Ver troféus de mundiais FIFA"...
+
+c) Devem aparecer, abaixo do botão, N imagens de um troféu, onde N é o valor informado em a). Porém...
+
+d) Caso o valor informado em a) seja 0 ou menos, a imagem que deve aparecer
+ apenas uma vez abaixo do botão é de um torcedor do time chorando -->
+    trofeus<input id="trofeu">
+
+    <button onclick="botao()">veja</button> <br>
+    <span id="texto"></span>
+
+</body>
+
+</html>
+<script>
+    function botao() {
+        var number = Number(trofeu.value);
+        var img = `<img src="https://th.bing.com/th/id/OIP.FGHmlp-g6aV54CSaTMFylAHaHa?w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2&w=1879&h=1879">`
+        var img_choro = `<img src ="https://st2.depositphotos.com/1007971/5261/i/950/depositphotos_52612261-stock-photo-little-girl-crying-with-tears.jpg">`
+        var imagem = `img src="${img}"`
+        var imagem_choro = `img src ="${img_choro}"`
+        
+        if (number <= 0) { texto.innerHTML = `${imagem_choro}` }
+        else {
+            var contador = 0 
+            while (contador < number) { texto.innerHTML = `<img scr ="${imagem}"` }
+            contador = contador + 1;
+
+        }
+    
+    }
+</script>

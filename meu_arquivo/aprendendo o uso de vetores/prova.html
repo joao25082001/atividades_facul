@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prova</title>
+</head>
+
+<body>
+    nome do atleta<input id="a">
+    idade do atleta<input id="b">
+    esporte praticados?:
+    <select onchange="esporte()">
+        <option id="g"value="corra">correr</option>
+        <option id="f"value="nadar">nadar</option>
+        <option id="t"value="pedalar">pedalar</option>
+    </select>
+    <button onclick="praticar()">praticar esporte</button> <br>
+    <div>
+        Nome:<b id="sla"></b> idade:</b><b id="sla2"></b> <br>
+        km correndo:<span id="bolt">0</span> <br>
+        km nadando:<span id="nadadeira">0</span> <br>
+        km pedalando: <span id="pedalarobinho">0</span><br>
+    </div>
+
+
+</body>
+
+</html>
+<script>
+    var idade = b.value
+    var nome = a.value
+    function praticar() {
+        var nome = a.value
+        var idade = b.value
+        if (nome == "") { alert("Nome em branco não será aceito") }
+        else if (nome.length < 3) { alert("nome curto") }
+        else if (idade == "") { alert("idade em branco não será aceito") }
+        else if (idade <= 18) { alert("intervalo de idade incorreto") }
+        else if (idade >= 80) { alert("intervalo de idade incorreto") }
+        else { "" }
+
+        sla.innerHTML = nome.toUpperCase`${nome}`
+        sla2.innerHTML = `${idade}`
+    }
+    var sr = g.valuepedalarobinho.innerHTML
+    var rs = f.value
+    var c = t.value 
+    function esporte() {
+
+        var sr = Number(bolt.innerHTML)
+        bolt.innerHTML = sr + 1.5;
+
+        var rs = Number(nadadeira.innerHTML)
+        nadadeira.innerHTML = rs + 1.5
+
+        var c = Number(pedalarobinho.innerHTML)
+
+        pedalarobinho.innerHTML =c + 1.5
+
+    }
+
+    // não consegui fazer a tempo//
+</script>

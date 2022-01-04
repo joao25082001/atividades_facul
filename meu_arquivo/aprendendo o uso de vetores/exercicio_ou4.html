@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 4. Renato é aluno Bandtec e bolou um critério para indicar em  quais empresa teria preferência em ir trabalhar. 
+        Seus critérios são: A bolsa deve ser pelo menos 1800 ou o VR pelo menos 20 ou deve ficar a no máximo 30 minutos de tempo de 
+        deslocamento da faculdade. Se um desses 3 critérios for ok, a empresa está entre suas preferências.
+         Assim, crie um programa em HTML/JS o qual:
+a) Solicite o nome da empresa
+b) Solicite o valor da bolsa da empresa
+c) Solicite o valor do VR da empresa
+d) Solicite o tempo de descolamento da empresa para a Bandtec
+e) Ao clicar em "É preferida?", mostre uma dessas mensagens na própria página, abaixo do botão:
+   "A empresa X é uma de suas preferências", caso a empresa atenda aos critérios aqui explicados
+   "A empresa X está fora da sua lista", caso contrário -->
+    nome da empresa: <input id="nome"> 
+    valor da bolsa: <input id="salario">
+    valor do vr: <input id="vr">
+    deslocamento: <input id="deslocamento">
+    <button onclick="preferida()"> é preferida?</button>
+
+</body>
+
+</html>
+<script>
+    function preferida() {
+        var a = nome.value
+        var b = salario.value
+        var c = vr.value
+        var d = deslocamento.value
+        if(b <=1800 || c < 20 || d > 30) 
+        {alert(` "A empresa ${a} é uma de suas preferências"`)}
+        else {
+            alert(`A empresa${a} está fora da sua lista`)
+        }
+    }
+</script>

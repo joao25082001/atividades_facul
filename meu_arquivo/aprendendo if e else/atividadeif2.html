@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    quantida deinfrações <input id="qtd">
+    valor do carro <input id="valor">
+    <button onclick="calculo()">calcular seguro</button>
+    <span id="acao"></span>
+
+</body>
+</html>
+<script>
+function calculo() {
+    var carro= Number(valor.value);
+    var infra = Number(qtd.value);
+    var seguro = carro * 0.015;
+    
+
+
+    if (infra <=3){seguro= seguro*0.09}
+alert(`O VALOR DO SEU  SEGURO É ${seguro} `)
+}
+
+
+
+</script>

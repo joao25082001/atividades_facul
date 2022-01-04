@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    time: <select onchange="ver_hino()" id="lista_time">
+        <option value="">selecione o time</option>
+        <option value="sao_paulo">sãopaulo</option>
+        <option value="corinthians">corinthians</option>
+        <option value="santos">santos</option>
+        <option value="palmeiras">palmeiras</option>
+    </select>
+    <div id="div_hino"></div>
+   
+</body>
+
+</html>
+<script>
+    function ver_hino() {
+        var time_selecionado = lista_time.value;
+        if (time_selecionado == "") {
+            div_hino.innerHTML = "";
+            div_hino.style.color = "black";
+            div_hino.style.backgroundColor = "white";
+        }
+        else if (time_selecionado == "sao_paulo") {
+            div_hino.innerHTML = "salve o tricolor";
+            div_hino.style.color = "red";
+            div_hino.style.backgroundColor = "black";
+        }
+        else if (time_selecionado == "santos") {
+            div_hino.innerHTML = "gollll do peleeeeeee";
+            div_hino.style.color = "white";
+            div_hino.style.backgroundColor = "black";
+        }
+        else if (time_selecionado == "corinthians") {
+            div_hino.innerHTML = "salve corinthians";
+            div_hino.style.color = "white";
+            div_hino.style.backgroundColor = "red"
+        }
+        else if (time_selecionado == "palmeiras") {
+            div_hino.innerHTML = "defesa que ninguem passa";
+            div_hino.style.color = "white";
+            div_hino.style.backgroundColor = "green"
+        }
+
+    }
+</script>

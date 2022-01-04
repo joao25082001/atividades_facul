@@ -1,0 +1,335 @@
+body {
+   
+    font-family: 'montserrat';
+    color: white;
+    padding: 0%;
+    margin: 0%;
+    height: 100%;
+    width: 100%;
+  }
+  .header {
+    color: #80FFD4;
+    border-top: #80FFD4 solid 3px;
+    border-bottom: #80FFD4 solid 3px;
+    background-color: black;
+    height: 10%;
+  }
+  img {
+    height: 75px;
+    width: 85px;
+    float: left;
+  }
+  .textos{
+      margin-top: 15%;
+      margin-left:80;
+      float: left;
+  }
+  .textojs{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: bold;
+
+  }
+  .textopets{
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      
+  }
+  .tags{
+      width: 40%;
+      
+      display: flex;
+      color: black;
+ 
+
+      
+  }
+  #senha {
+      height: 25px;
+      width: 150px;
+      border-radius: 500px ;
+      border:solid 2px #80FFD4 ;
+      background-color:black;
+      margin-bottom: 5px;
+      font-size: 15px;
+  }
+  .tags img {
+    height: 25px;
+     width: 25px; 
+     background-color: #80FFD4;
+     border-radius: 25px;
+    margin-top: 5px;
+    margin-left:10% ;}
+  #email {
+    height: 25px;
+    width: 150px;
+    border-radius: 500px ;
+    border:solid 2px #80FFD4;
+    background-color: black;
+    font-size: 15px;
+    color: #80FFD4;
+  }
+  .a {
+    color: #80FFD4 ;
+    text-decoration: none;
+    margin-left: 5%;
+    margin-top: 5px;
+  }
+
+  
+  .titulo {
+    font-weight: 600;
+  }
+  .agora {
+    font-weight: 450;
+  }
+  
+  .container {
+    width: 95%;
+    padding-left: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 25%;
+  }
+  
+  /* .navbar {
+    list-style: none;
+    display: flex;
+    color: rgb(210, 210, 255);
+    justify-content: space-evenly;
+    width: 400px;
+  }
+  .navbar a {
+    color: rgb(210, 210, 255);
+    text-decoration: none;
+  } */
+  /* ----------- Banner --------------- */
+  
+  .banner {
+   
+    
+    width: 1340px;
+    height:400px;
+    
+    
+    
+    
+    
+  }
+   .foto {
+      width: 50%;
+      float: left;
+   /* background-image:url(../imgs/70a3c7b9-86de-480f-80fd-876b8dc6eb70.tmp) ;  */
+   background-repeat:no-repeat ;
+      
+      height: 100%;
+      margin:0 0 0 0;
+      background-color: white;
+  
+   }
+   .foto img{
+       height: 400px;
+       width: 400px;
+       margin: 80px 0 0 100px;
+      
+
+   }
+   #formularios{
+    width: 50%;
+    float: right;
+    background-repeat: no-repeat;
+    height: 100%;
+    color: black;
+    
+    
+}
+#botoes{
+    display: block;
+}
+#botoes span{
+   font-family:  'sans-serif' ;
+   font-size: 100px;
+   margin-left: 180px;
+   margin-top: 200px;
+   margin-right: 100px;
+}
+#botoes button{
+ margin:10% 10px 0 20px;
+ height: 25%;
+ width: 45%;
+ justify-content:space-around;
+ border-radius: 500px;
+background-color: #80FFD4;
+border: white 3px;
+font-size: 25px;
+
+}
+      
+
+  
+  #form_adotador  {
+    width: 50%;
+    float: left;
+    background-color: white ;
+    background-repeat: no-repeat;
+    height: 100%;
+    color: black;
+    margin-top: 50px;
+    margin-left: 200px;
+     display: none; 
+     overflow-y: scroll
+   
+}
+#form_adotador span{
+    display: block;
+
+}
+
+#form_adotador input{
+    height: 15px;
+     width: 90%;
+     border-radius: 500px ;
+     border: #80FFD4 solid 2px;
+     display: flex;
+     margin: 2% 5% 0 0;
+    
+}
+#form_casa {
+    width: 50%;
+    float: left;
+    background-color: white ;
+    background-repeat: no-repeat;
+    height: 100%;
+    color: black;
+    margin-top: 50px;
+    display:none ;
+    margin-left: 200px;
+    justify-content:space-between;
+    display: none; 
+     overflow-y: scroll
+     /* width: 50%;
+    float: left;
+    background-color: white ;
+    background-repeat: no-repeat;
+    height: 100%;
+    color: black;
+    margin-top: 50px;
+    margin-left: 200px;
+     display: none; 
+     overflow-y: scroll */
+}
+#form_casa input{
+    height: 15px;
+     width: 90%;
+     border-radius: 500px ;
+     border: rgb(197, 238, 224) solid 3px;
+     display: flex;
+     margin: 2% 0 0 0;
+}
+#form_casa button{
+  background-color: #80FFD4;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  border-radius: 35px;
+  margin-left: 125px;
+}
+#form_adotador button {
+  background-color: #80FFD4;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  border-radius: 35px;
+  margin-left: 125px;
+
+}
+.motivo_frase1{
+  color:black;
+   margin-top: 11%;
+   font-size: 100px;
+   text-align: center;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   border-radius: 35px;
+  
+}
+
+#motivos{
+  
+  display: flex;
+
+  height: 60vh;
+  
+  
+}
+.motivos1{
+  width: 50%;
+  height: 100%;
+  background-image:url(../imgs/);
+  color: black;
+ 
+  
+}
+.motivos1 span{
+  color: blueviolet;
+}
+
+.motivos2{
+  width: 50%;
+  height: 100%;
+  background-image:url(../imgs/git\ fofo.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+#footer{
+ 
+  height: 42vh;
+  margin-top: 3px;
+  width:100%;
+  /* padding: 0 0 0 10%; */
+ 
+  font-size: 25px;  
+}
+
+
+
+
+
+ .box1 {
+  
+  width: 33%;
+  
+  height: 100%;
+  border: greenyellow 4px solid;
+  color: black;
+  font-size:15px;
+  float: left;
+  justify-items: center;
+  text-align: center;
+  border-radius:25px;
+  display:grid;
+
+}
+  .box2{
+  width: 33%;
+  height: 100%;
+  border: greenyellow 4px solid;
+  float: left;
+color: black;
+font-size:15px;
+justify-items: center;
+text-align: center;
+border-radius:25px;
+display:grid;
+  
+}
+.box3{
+  width: 32.22%;
+  height: 100%;
+  border: greenyellow 4px solid;
+  border-radius:25px ;
+  float: right;
+  color: black;
+  font-size:15px;
+  justify-items: center;
+  text-align: center;
+  display:grid;
+}
+ input::placeholder{
+   color: #80FFD4
+  }

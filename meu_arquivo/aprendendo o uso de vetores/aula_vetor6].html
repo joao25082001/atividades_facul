@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 6. Crie um programa em HTML/JS em que:
+
+a) Tenha uma lista de alunos e um botão para cadastrar novos (mostre 
+como a lista está a cada novo aluno inserido).
+
+b) Ao tentar inserir um aluno, verifique se já não existe na lista - caso exista, não insira-o.
+
+c) Tenha um campo para pesquisar alunos, onde o usuário possa verificar se o 
+aluno em questão já existe (se existir, exiba um alert com a frase "O aluno X já existe na lista").
+
+*Obs o campo para pesquisar alunos pode ser o mesmo para inserir novos. -->
+cadastrar: <input id="input_aluno">
+<button onclick="cadastrar()"> clique</button>
+<button onclick=" pesquisar()"> pesquisar aluno</button>
+ 
+<div id="mostrar"></div>
+
+
+</body>
+</html>
+<script>
+    vetor = []
+    function cadastrar(){
+        var aluno = input_aluno.value
+          vetor.push(aluno)
+          mostrar.innerHTML=""
+          for(var i = 0; i < vetor.length; i ++){
+              mostrar.innerHTML += `${vetor[i]}<br>`
+          }
+    }
+     function pesquisar(){
+         var pesquise = input_aluno.value;
+         if(pesquise <= vetor[vetor.length -1] ) 
+         {alert(` o aluno ${pesquise} ja existe` )}
+         else if(pesquise ==""){alert("campo vazio")}
+         else {alert("pode inserir")}
+     }
+</script>

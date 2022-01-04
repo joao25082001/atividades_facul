@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  compras de maça <input id="qntmacas"> 
+  <button  onclick="compra_finalizada()">finalizar compra</button> 
+</body>
+</html>
+<script>
+ function compra_finalizada(){
+     var preco = Number(qntmacas.value);
+     var Numero  = 0.75
+     if (preco >= 10){Numero =0.68};
+    var preco1 = preco * Numero;
+   
+    
+alert(preco1)
+ }
+
+</script>

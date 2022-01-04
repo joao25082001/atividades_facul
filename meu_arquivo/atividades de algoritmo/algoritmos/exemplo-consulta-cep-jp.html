@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de fetch usando API externa</title>
+</head>
+
+<body>
+    <div>
+        <label for="testeLabel">Digite seu CEP (somente números): </label> <br>
+        <input type="text" id="ipt_cep"> <br>
+        <button onclick="buscarCepApi()">Verificar</button> 
+    </div>
+    <br><br>
+    Resultado:
+    <div id="div_resultado"></div>
+</body>
+
+</html>
+
+<script>
+    function buscarCepApi() {
+        var ax_cep = ipt_cep.value; // recebendo dado de CEP inputado
+        var ax_CONFIGURACAO_ADICIONAL = {
+            method: 'GET',    // método da requisição -> indica que iremos utilizar a requisição para 'PEGAR' dados 
+            mode: 'cors',     // CORS (Google it) -> modo que aceita ORIGENS CRUZADAS, onde podemos fazer consumo de APIs que não estejam na mesma origem e acessar seus recursos 
+        };
+
+        console.log("ax_cep: " + ax_cep); // console.log --> serve para exibir alguma coisa no console (terminal onde aparecem os erros no "inspecionar" do navegador - Google Dev Tools) 
+
+        /*
+            Para se consumir de alguma API, existe a função nativa do javascript, o 'fetch' (que significa 'buscar').
+            
+            fetch --> Serve para realizar uma busca em algum endereço, no qual ele fará uma requisição HTTP, recebendo o parâmetro do endereço da API como string, e um parâmetro JSON de 
+                      configurações adicionais;
+            .then () --> Aguarda a execução e finalização do fetch, e SOMENTE CASO O FETCH TERMINE DE SER EXECUTADO SEM NENHUM ERRO o then é executado, onde receberá os dados obtidos pelo fetch 
+                         (parâmetro nomeado como ax_resposta), e executará a função anônima (sem nome, é executada instantaneamente, invés de ser executada somente quando é chamada pelo nome);
+            .catch () --> Aguarda a execução do fetch, e CASO OCORRA QUALQUER ERRO NO FETCH, o catch é acionado, recebendo o parâmetro do erro ocorrido (nomeado como ax_error), e executando a 
+                          função anônima (sem nome, é executada instantaneamente, invés de ser executada somente quando é chamada pelo nome);
+        */
+        fetch(`https://viacep.com.br/ws/${ax_cep}/json/`, ax_CONFIGURACAO_ADICIONAL).then(function (ax_resposta) {
+            console.log("resposta recebida pela requisição realizada: ", ax_resposta); // resposta enviada pela API quando fizemos a requisição com o FETCH
+            ax_resposta.json().then(function (ax_data) { // precisamos formatar essa resposta para JSON para que possamos acessar e manipular os seus dados, e ENTÃO (then), após a formatação, 
+                                                         // fazer uso dos dados recebidos como parâmetro na função anônima (nomeado como ax_data) 
+                console.log("dados como JSON: ", ax_data); // mostrando o objeto JSON formatado
+                console.log("dados em string: ", JSON.stringify(ax_data)); // mostrando o objeto JSON transformado em string
+                div_resultado.innerHTML = `DADOS (se não formatar, ele renderiza [object Object]): <br> ${JSON.stringify(ax_data)}`; // exibindo o valor do objeto JSON como string na div_resultado
+                div_resultado.innerHTML += `<br><br><br> Pegando valores: <br> <b style="color: red">${ax_data.logradouro}</b>`; // acessando um atributo do objeto JSON
+            })
+        }).catch(function (ax_error) {
+            console.error("DEU ERRO: \n", ax_error); // exibe a mensagem de erro obtida pelo catch no console, como se fosse um erro (cor vermelha etc)
+        });
+    }
+</script>

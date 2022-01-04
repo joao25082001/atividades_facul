@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--3. Crie um programa em HTML/JS o qual:
+a) Tenha uma combo com todos os meses do ano;
+b) Após alterar o valor da combo, exiba abaixo dela o nome uma imagem da estação do ano mais provável;
+c) Considere que o clima é no hemisfério norte, ou seja:
+    Primavera: março, abril e maio.
+    Verão: junho, julho e agosto.
+    Outono: setembro, outubro e novembro.
+    Inverno: dezembro, janeiro e fevereiro. -->
+</head>
+
+<body>
+    meses:<select onchange="meses_do_ano()" id="meses1">
+        <option value="">selecione a estação</option>
+        <option value="Inverno">jan></option>
+        <option value="Inverno">fev</option>
+        <option value="Primavera">mar</option>
+        <option value="Primavera">abr</option>
+        <option value="Primavera">mai</option>
+        <option value="verao">jun</option>
+        <option value="verao">jul</option>
+        <option value="verao">ago</option>
+        <option value="outono">set</option>
+        <option value="outono">out</option>
+        <option value="outono">nov</option>
+        <option value="Inverno">dez</option>
+    </select>
+    <div id="div"></div>
+</body>
+
+</html>
+
+<script>
+    function meses_do_ano() {
+        var estacao = meses1.value;
+
+
+        if (estacao == "Primavera"
+        ) { div.innerHTML = `<img src="https://tse3.mm.bing.net/th?id=OIP.uIIlvAtGOrOWUF0lCLTJFwHaEK&pid=Api&P=0&w=286&h=162">` }
+        else if (estacao=="verao")
+        { div.innerHTML = `<img src="https://tse3.mm.bing.net/th?id=OIP.6pTWZCMSS53yZx9QHVlLPQHaFj&pid=Api&P=0&w=240&h=181">` }
+        if (estacao == "Inverno"
+        ) { div.innerHTML = `<img src="https://tse2.mm.bing.net/th?id=OIP.4EYRDQDnzIjuf87wpNlBwgHaFk&pid=Api&P=0&w=219&h=165">` }
+        if (estacao == "outono"
+        ) { div.innerHTML = `<img src="https://tse2.mm.bing.net/th?id=OIP._HzS9vbY4ohX5tbtNkzRwwHaF7&pid=Api&P=0&w=220&h=177">` }
+        
+    }
+</script>

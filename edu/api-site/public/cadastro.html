@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/tela_cadastro.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" href="imgs/70a3c7b9-86de-480f-80fd-876b8dc6eb70.tmp" />
+</head>
+
+<body>
+    <!-- --------------CABEÇALHOO------------------ -->
+    <div class="header">
+        <div class="container">
+            <h1 class="Titulo">
+                <img src="https://clipartart.com/images/white-dog-paw-clipart-4.jpg" onclick="cliquar_foto()" alt="" />
+                <div class="textos">
+                    <span class="textojs"> JS</span><span class="textopets">pets</span>
+                </div>
+            </h1>
+            <div class="tags">
+                <img src="../algoritmo/imgs/foto de pessoa png.png" alt=""><input id="email" placeholder="email">
+                <img src="https://clipground.com/images/cadeado-png-7.png" alt=""><input type="password" id="senha"
+                    placeholder="senha">
+
+                <a class="a" href="login.html">Login</a>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!----------------- Banner------------------ -->
+    <div class="banner">
+
+        <div class="foto">
+            <img onclick="cliquar_foto()" src="../algoritmo/imgs/70a3c7b9-86de-480f-80fd-876b8dc6eb70.tmp" alt="">
+        </div>
+        <div id="formularios">
+            <div id="botoes">
+                <span> escolha </span> <br>
+                <button onclick="adotador()">
+                    quero adotar
+                </button>
+                <button onclick="casa()">
+                    casa de adoção
+                </button>
+            </div>
+
+            <div id="form_adotador" class="form_adotador">
+                Nome :<input name='nome_adotador' id="nome_adotador">
+                <span id=texto1></span> <br>
+                e-mail:<input id="email_adotador"><br>
+                <span id="texto2"></span>
+                idade:<input id="idade_adotador"><br>
+                <span id="texto3"></span>
+                cep: <input id="cep_adotado"> <br>
+                <span id="texto_indereço1"></span>
+                rua: <input id="rua_adotador"> <br>
+                <span id="texto_indereço2"></span>
+                bairro:<input id="bairro_adotador"> <br>
+                <span id="texto_indereço3"></span>
+                cidade: <input id="cidade_adotador">
+                <span id="cidade_adotadortexto"></span>
+                estado:<input id="estado_adotador"> <br>
+                <span id="texto_indereço4"></span>
+
+
+                telefone:<input id="telefone_adotador"><br>
+                <span id="texto5"></span>
+                senha:<input type="password" id="senha_adotador"> <br>
+                <span id="texto6"></span>
+                confirma:<input type="password" id="confirmação_adotador">
+                <span id="texto7"></span>
+                <button onclick="verificar()"> cadastra-se</button>
+
+            </div>
+            <div id="form_casa" class="form_casa.css"> <br>
+                nome :<input id="nome_casa">
+                <span id=texto8></span> <br>
+                email:<input id="email_casa"><br>
+                <span id="texto10"></span>
+
+                cep: <input id="cep_casa"> <br>
+                <span id="casa_indereço1"></span>
+                rua: <input id="rua_casa" disabled> <br>
+                <span id="casa_indereço2"></span>
+                bairro:<input id="bairro_casa" disabled> <br>
+                <span id="casa_indereço3"></span>
+                cidade: <input id="cidade_casa" disabled>
+                <span id="casa_endereço4"></span>
+                estado:<input id="estado_casa" disabled> <br>
+                <span id="casa_indereço5"></span>
+                cnpj:<input id="cnpj_casa"> <br>
+                <span id="texto11"></span>
+                telefone:<input id="telefonecelular_casa"> <br>
+                <span id="texto12"></span>
+                senha:<input type="password" id="senha_casa"> <br>
+                <span id="texto13"></span>
+                confirma: <input type="password" id="confirmação_casa">
+                <span id="texto14"></span>
+                <button onclick="verificar_casa()"> cadastra-se</button>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="motivo_frase1"> por que adotar um pet?</div>
+    <div id="motivos">
+
+        <div class=motivos1 data-aos="fade-up-right" data-aos-duration="3000">
+            <span>1</span>.Adotar é uma forma de trazer um novo conceito para a sua vida. <br>
+            <br>
+            <br>
+            <span>2</span>.Diminui o número de animais abandonados nas ruas e em abrigos. <br>
+            <br>
+            <br>
+            <span>3</span>.Ter um pet em casa = felicidade para o lar. <br>
+            <br>
+            <br>
+            <span>4</span>.Você estará resgatando uma vida. <br>
+            <br>
+            <br>
+            <span>5</span>.Ter um pet em casa faz bem para a saúde <br>
+            <br>
+            <br>
+            <span>7</span>.Não terá surpresas, caso opte pela adoção de um pet adulto <br>
+            <br>
+            <br>
+            <span>8</span>.Você não financia o sofrimento do mercado de pets <br>
+            <br>
+            <br>
+        </div>
+        <div class="motivos2" data-aos="fade-down-left" data-aos-duration="3000"></div>
+
+
+    </div>
+    <div id="footer" data-aos="fade-left" data-aos-duration="3000">
+
+        <div class="box1">
+            <p>
+            <h1>visão</h1>
+            </p>
+            <img src="../algoritmo/imgs/visao.png" alt="">
+            conseguir através do amor criar um mundo melhor para qualquer pet.
+        </div>
+        <div class="box2">
+            <p>
+            <h1>missão</h1>
+            </p>
+            <img src="../algoritmo/imgs/missao.png" alt="">
+            Ajudar a todos anjos que existem encontrar um lar seguro,saúdavel e amigavel.
+        </div>
+        <div class="box3">
+            <p>
+            <h1>valores</h1>
+            </p>
+            <img src="../algoritmo/imgs/valores.png" alt="">
+            valorizamos o amor,carinho,zelo e empatia,
+            pois só assim o mundo consiguira ser justo e reconfortante para qualquer animal.
+
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init()
+    </script>
+    <!-- <div id="footer2">
+        <div>
+            <p>
+                <h2>visão</h2>
+            </p>
+            <img src="../algoritmo/imgs/visao.png" alt="">
+        </div>
+         
+             <p>
+            <h2>missão</h2>
+             </p>
+           <img src="../algoritmo/imgs/missao.png" alt="">
+        </div>
+        <div>
+            <p>
+                <h2>valores</h2>
+            </p>
+            <img src="../algoritmo/imgs/valores.png" alt=""></div>
+            </div>
+     </div> -->
+
+
+</body>
+
+</html>
+<script>
+    function cadastrar_adotador() {
+
+        var nome = nome_adotador.value;
+        var email = email_adotador.value;
+        var idade = idade_adotador.value;
+        var cep = cep_adotado.value;
+        var rua = rua_adotador.value;
+        var bairro = bairro_adotador.value;
+        var cidade = cidade_adotador.value;
+        var estado = estado_adotador.value;
+        var telefone = telefone_adotador.value;
+        var senha = senha_adotador.value;
+        var confirma = confirmação_adotador.value;
+
+        console.log("Informações" + nome, email, idade, cep, rua, bairro, cidade, estado, telefone, senha, confirma);
+        fetch("/usuarios/cadastrar_adotador", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                nome: nome,
+                email: email,
+                idade: idade,
+                cep: cep,
+                rua: rua,
+                bairro: bairro,
+                cidade: cidade,
+                estado: estado,
+                telefone: telefone,
+                senha: senha,
+                confirma: confirma,
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                window.alert("Cadastro realizado com sucesso!");
+                window.location = "login.html";
+                finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+
+        });
+
+    }
+    // function cadastrar_casa() {
+    //     var nomecasa = nome_casa.value;
+    //     var emailcasa = email_casa.value;
+    //     var cnpjcasa = cnpj_casa.value;
+    //     var cep_casa= cep_casa.value;
+    //     var telefonecasa = telefonecelular_casa.value;
+    //     var senhacasa = senha_casa.value;
+    //     var confirmacasa = confirmação_casa.value;
+    //     fetch("/usuarios/cadastrar_casa", {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         },
+    //         body: JSON.stringify({
+    //             nomecasa: nomecasa,
+    //             emailcasa: email_casa,
+    //             cnpjcasa:cnpjcasa,
+    //             cep_casa: cep_casa,
+    //             telefonecasa : telefonecasa,
+    //             senhacasa: senhacasa,
+    //             confirmacasa:confirmacasa
+    //         })
+    //     }).then(function (resposta) {
+
+    //         console.log("resposta: ", resposta);
+
+    //         if (resposta.ok) {
+    //             window.alert("Cadastro realizado com sucesso!");
+    //             window.location = "login.html";
+    //             finalizarAguardar();
+    //         } else {
+    //             throw ("Houve um erro ao tentar realizar o cadastro!");
+    //         }
+    //     }).catch(function (resposta) {
+    //         console.log(`#ERRO: ${resposta}`);
+    //         finalizarAguardar();
+    //     });
+    // }
+    function cliquar_foto() {
+        location.reload()
+
+    }
+    function adotador() {
+        botoes.style.display = "none"
+        form_adotador.style.display = "block"
+
+    }
+    function casa() {
+        botoes.style.display = "none"
+        form_casa.style.display = "block"
+    }
+    function verificar() {
+        cadastrar_adotador()
+        var nome = nome_adotador.value;
+        var email = email_adotador.value;
+        var idade = idade_adotador.value;
+        var cep = cep_adotado.value;
+        var telefone = telefone_adotador.value;
+        var senha = senha_adotador.value;
+        var confirma = confirmação_adotador.value
+        if (email == "@.com") {
+            texto2.innerHTML = "email invalido";
+            texto2.style.color = "red";
+            texto2.style.display = "block";
+        }
+
+        else if (email.indexOf("@") > -1 && email.indexOf(".com")) {
+            // else if (email.indexOf(".com") > -1) {
+            texto2.innerHTML = "Email válido";
+            texto2.style.color = "green";
+            texto2.style.display = "block";
+        }
+
+        else {
+            texto2.innerHTML = "Email inválido,insira os caracteres @ e o .com no seu email";
+            texto2.style.color = "red";
+            texto2.style.display = "block";
+        }
+        if (nome == "") {
+            texto1.innerHTML = "insira um nome"
+            texto1.style.color = "red";
+            texto1.style.display = "block";
+        }
+        else {
+            texto1.innerHTML = "ok";
+            texto1.style.color = "green";
+            texto1.style.display = "block";
+        }
+        if (idade < 18) {
+            texto3.innerHTML = "apenas maiores de 18 podem adotar"
+            texto3.style.color = "red";
+            texto3.style.display = "block";
+        }
+        else {
+            texto3.innerHTML = "ok"
+            texto3.style.color = "green";
+            texto3.style.display = "block";
+        }
+
+        fetch(`https://viacep.com.br/ws/08441520/json/`, {
+            method: "GET",
+            node: "cors"
+        })
+
+            .then(function (resposta) {
+                console.log(resposta)
+                resposta.json().then(function (data) {
+                    console.log(data.bairro);
+                    rua_adotador.value = `${data.logradouro}`
+                    bairro_adotador.value = `${data.bairro}`
+                    cidade_adotador.value = `${data.localidade}`
+                    estado_adotador.value = `${data.uf}`
+                })
+                console.log(resposta);
+
+
+            }).catch(function (erro) {
+                console.log(erro)
+                alert("campo do cep vazio");
+
+            })
+        if (telefone.length == 11) {
+            texto5.innerHTML = "ok";
+            texto5.style.color = "green";
+            texto5.style.display = "block";
+        }
+
+        else {
+            texto5.innerHTML = "telefone precisa ter 11 caracteres, EX:11977751560";
+            texto5.style.color = "red";
+            texto5.style.display = "block"
+        }
+        if (senha.length <= 8 || senha.length > 12) {
+            texto6.innerHTML = "senha deve ter de 8 a 12 digitos";
+            texto6.style.color = "red";
+            texto6.style.display = "block"
+        }
+
+        else {
+            texto6.innerHTML = "ok";
+            texto6.style.color = "green";
+            texto6.style.display = "block"
+        }
+        if (confirma != senha) {
+            texto7.innerHTML = "senhas diferentes";
+            texto7.style.color = "red";
+            texto7.style.display = "block"
+        }
+
+        else {
+            texto7.innerHTML = "ok";
+            texto7.style.color = "green";
+            texto7.style.display = "block"
+        }
+
+    }
+    function verificar_casa() {
+        var nomecasa = nome_casa.value;
+        var emailcasa = email_casa.value;
+        var cnpjcasa = cnpj_casa.value;
+        var cep_casa = cep_casa.value;
+        var telefonecasa = telefonecelular_casa.value;
+        var senhacasa = senha_casa.value;
+        var confirmacasa = confirmação_casa.value;
+        if (nomecasa == "") {
+            texto8.innerHTML = "insira um nome"
+            texto8.style.color = "red";
+            texto8.style.display = "block";
+        }
+        else {
+            texto8.innerHTML = "ok";
+            texto8.style.color = "green";
+            texto8.style.display = "block";
+        }
+        fetch(`https://viacep.com.br/ws/${cep}/json/`, {
+            method: "GET",
+            node: "cors"
+        })
+
+
+            .then(function (resposta) {
+                console.log(resposta)
+                resposta.json().then(function (data) {
+                    console.log(data.bairro);
+                    rua_casa.value = `${data.logradouro}`
+                    bairro_casa.value = `${data.bairro}`
+                    cidade_casa.value = `${data.localidade}`
+                    estado_casa.value = `${data.uf}`
+                })
+                console.log(resposta);
+
+
+            }).catch(function (erro) {
+                console.log(erro)
+                alert("verifique o campode email");
+
+                if (cep_casa = then) { casa_endereço1.innerHTML = `ok` }
+            })
+        if (emailcasa == "@.com") {
+            texto10.innerHTML = "email invalido";
+            texto10.style.color = "red";
+            texto10.style.display = "block";
+        }
+
+        else if (emailcasa.indexOf("@") > -1 && emailcasa.indexOf(".com") > - 1) {
+            // else if (email.indexOf(".com") > -1) {
+            texto10.innerHTML = "Email válido";
+            texto10.style.color = "green";
+            texto10.style.display = "block";
+        }
+
+        else {
+            texto10.innerHTML = "Email inválido,insira os caracteres @ e o .com no seu email";
+            texto10.style.color = "red";
+            texto10.style.display = "block";
+        }
+        if (telefonecasa.length == 11) {
+            texto12.innerHTML = "ok";
+            texto12.style.color = "green";
+            texto12.style.display = "block";
+        }
+
+        else {
+            texto12.innerHTML = "telefone precisa ter 11 caracteres, EX:11977751560";
+            texto12.style.color = "red";
+            texto12.style.display = "block"
+        }
+        if (senhacasa.length < 8 || senha.length > 12) {
+            texto13.innerHTML = "senha deve ter de 8 a 12 digitos";
+            texto13.style.color = "red";
+            texto13.style.display = "block"
+        }
+
+        else {
+            texto13.innerHTML = "ok";
+            texto13.style.color = "green";
+            texto13.style.display = "block"
+        }
+        if (confirmacasa != senhacasa) {
+            texto14.innerHTML = "senhas diferentes";
+            texto14.style.color = "red";
+            texto14.style.display = "block"
+        }
+
+        else {
+            texto14.innerHTML = "ok";
+            texto14.style.color = "green";
+            texto14.style.display = "block"
+        }
+    }
+
+</script>

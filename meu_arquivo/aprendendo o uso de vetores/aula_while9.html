@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 9. Crie um programa em HTML/JS o qual
+
+a) Pergunte ao usuário um número
+
+b) Pergunte ao usuário uma frase
+
+c) Ao clicar num botão "Papagaio", a frase é exibida N vezes em N alerts, onde N é o número informado em a) -->
+frase <input id="nome">
+ numero? <input id="numero">
+ <button onclick="botao()">expressar amor</button> <br>
+ <span id="texto"></span>
+
+</body>
+</html>
+<script>
+    function botao() 
+    {
+        var nome1 = nome.value;
+        var number = Number(numero.value);
+        var contador = 0
+        while (contador< number) 
+        {
+        contador=contador + 1;
+
+        alert(`${nome1} <br>`)
+        }
+    }
+</script>

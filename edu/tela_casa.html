@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>casa</title>
+    <link rel="stylesheet" href="../algoritmo/css/tela_casa.css">
+</head>
+
+<body>
+    <!-- cabeça -->
+
+    <div class="banner">
+        <div class=" fotinha">
+            <img onclick="recarregar()" src="imgs/foto pata branca.jpg" alt=""> JS<span>pets</span>
+        </div>
+        <div class=" menulateral">
+            <div class=" pontos">
+                <img onclick=fotomenu() src="../algoritmo/imgs/3 pontinhos.png" alt="">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div id="clicar">
+        <ul>
+
+            <li> <button onclick="aparecer_cadastro()"> cadastrar pet </button></li>
+            <li> <button> fila de fila de adoção </button></li>
+
+            <li> <button>editar cadastro </button></li>
+        </ul>
+    </div>
+    <div id="perfil">
+        <img onclick="botao_aparecer()" type=url
+            src="https://th.bing.com/th/id/R.79444de8511a6dadffa4082e06386fb2?rik=6vWZKjltZsWhYw&pid=ImgRaw&r=0" alt="">
+        <input id="chamar_input" placeholder="inserir"> <button id="botao_do_perfil"
+            onclick="botao_perfil()">inserir</button>
+    </div>
+
+    <div id="cadastro_dog">
+        <div class="container">
+            <span> NOVA PUBLICAÇÃO  </span><br>
+            <div> Nome:</div><input id="nome_dog">
+            <div> Animal:</div><input id="animal">
+            <div> idade:</div><input id="idade">
+            <div> raça:</div><input id="raça">
+            <div> tamanho:</div><input id="tamanho.value">
+        </div>
+        <div id="container_foto">
+            <img id=foto_troca onclick="foto_link()"
+                src="https://th.bing.com/th/id/R.79444de8511a6dadffa4082e06386fb2?rik=6vWZKjltZsWhYw&pid=ImgRaw&r=0">
+                <button onclick="realizar_cadastro()">cadastrar</button><button id=botao_inserir onclick="troca_foto()">inserir foto</button> 
+            <input id="link" type=" url" placeholder="insira o link ou indereço da imagem "> <br>
+           
+        </div>
+
+    </div>
+    <div class="container3">
+        <div class="carrosel">
+
+            <div class="perfil  perfil-1" id="div-1">
+                <div class="lado_esquerdo">
+                    <a id="esquerdo" href="#div-3">
+                        voltar
+                    </a>
+                    <a id="direito" href="#div-2">
+                        avançar
+                    </a>
+                </div>
+
+                <div id="foto_dog"> <img src="https://th.bing.com/th/id/OIP.NPg1Kj59MpnlVheLYKn8oAHaE8?pid=ImgDet&rs=1">   </div>
+                <span id=nome_doguinho1>paçoca</span>
+                <div id="input_idade"></div>
+                <div id="input_raça"></div>
+                <div id="input_tamanho"></div>
+                <div id="input_cachorro"></div>
+
+            </div>
+
+            <div class="perfil  perfil-2" id="div-2">
+                <div class="lado_esquerdo">
+                    <a id="esquerdo" href="#div-1">
+                        voltar
+                    </a>
+                    <a id="direito" href="#div-3">
+                        avançar
+                    </a>
+                </div>
+
+                <div id="foto_dog"> <img src="https://th.bing.com/th/id/OIP.NPg1Kj59MpnlVheLYKn8oAHaE8?pid=ImgDet&rs=1">   </div>
+                <span id=nome_doguinho>rex</span>
+                <div id="input_idade"></div>
+                <div id="input_raça"></div>
+                <div id="input_tamanho"></div>
+                <div id="input_cachorro"></div>
+            </div>
+
+            <div class="perfil  perfil-3" id="div-3">
+                <div class="lado_esquerdo">
+                    <a id="esquerdo" href="#div-2">
+                        voltar
+                    </a>
+                    <a id="direito" href="#div-1">
+                        avançar
+                    </a>
+                </div>
+
+                <div id="foto_dog"> <img src="https://th.bing.com/th/id/OIP.NPg1Kj59MpnlVheLYKn8oAHaE8?pid=ImgDet&rs=1">   </div>
+                <span id=nome_doguinho>cabrito</span>
+                <div id="input_idade"></div>
+                <div id="input_raça"></div>
+                <div id="input_tamanho"></div>
+                <div id="input_cachorro"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
+<script>
+    window.location = "#div-1";
+    function recarregar() {
+        location.reload()
+    }
+    function fotomenu() {
+        clicar.style.display = "block"
+
+    }
+    function foto_link() {
+        link.style.display = "block"
+        botao_inserir.style.display = "block"
+    }
+
+    function troca_foto() {
+        var a = link.value
+        var foto_troca = `<img src="${a}">  <input id="link"  placeholder="insira o link ou indereço da imagem aqui"> 
+        <button onclick="realizar_cadastro()">cadastrar</button> <button  id=botao_inserir onclick="troca_foto()">inserir</button> `
+        container_foto.innerHTML = foto_troca;
+        link.style.display = "block"
+        botao_inserir.style.display = "block"
+
+
+    }
+
+    function botao_aparecer() {
+
+        chamar_input.style.display = "block"
+        botao_do_perfil.style.display = "block"
+    }
+
+    function botao_perfil() {
+        var link = chamar_input.value;
+        var resultado = `<img src="${link}"> <input id="chamar_input" placeholder="inserir"> <button  id= "botao_do_perfil"onclick="botao_perfil()">inserir</button>`
+        perfil.innerHTML = resultado
+        chamar_input.style.display = "block"
+        botao_do_perfil.style.display = "block"
+    }
+    function aparecer_cadastro() {
+        cadastro_dog.style.display = "block"
+        cadastro_dog.style.display = "flex"
+        clicar.style.display = "none"
+    }
+    function  realizar_cadastro(){
+        
+        nome_doguinho1.innerHTML= nome_dog.value
+
+
+    }
+
+
+
+</script>

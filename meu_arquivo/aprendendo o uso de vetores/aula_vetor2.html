@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vetor2</title>
+</head>
+<body>
+    lugar de viagem:<input id="lugares_viajados">
+    <button onclick="cadastrar()">cadastrar LOCAL</button> <br>
+     adicione um numero:<input id="numero">
+     <button onclick="relembrar()">relembrar viagem</button> 
+     <span id="texto"></span>
+</body>
+</html>
+<script>
+        vetor=[];
+    function cadastrar() {
+        var lugar = lugares_viajados.value
+        vetor.push(lugar);
+        // for(var contagem = 0; contagem < vetor.length; contagem ++){
+
+        // }
+        // texto.innerHTML = `${vetor.length }`
+    }
+      function relembrar(){
+        //   [a,b,c,d,f]
+        //    0,1,2,3,4
+        //  length => 5
+        //  length - 1 = 4 
+
+          var  pesquisar = numero.value - 1;
+            
+            var conta = vetor 
+            if(pesquisar < vetor.length)
+           
+         texto.innerHTML = `${vetor[pesquisar]}`
+         
+      }
+</script>

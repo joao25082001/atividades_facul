@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vetor reforço</title>
+</head>
+
+<body>
+    digite o nome de uma fruta <input id="nome_fruta"> <br>
+    <button onclick="adicionar()">adiciona</button> <br>
+    <span style="display: block;" id="lista"></span> <br>
+    <button onclick="nota()">ver nota fiscal</button> <br>
+    <div style="display:none;" id="nota_fiscal"></div>
+
+</body>
+
+</html>
+<script>
+    var vetor = []
+    function adicionar() {
+        var nome = nome_fruta.value;
+        vetor.push(nome);
+        lista.innerHTML = "";
+        for (var contador = 0; contador < vetor.length; contador++) {
+            lista.innerHTML += `${vetor[contador]}<br>`
+        }
+
+
+    }
+    function nota() {
+        var primeiro = vetor[0];
+        var ultimo = vetor[vetor.length - 1]
+        var qtd_frutas = vetor.length;
+        var total = qtd_frutas * 2.50
+        nota_fiscal.innerHTML =
+            `
+            primeira fruta: ${primeiro}<br>
+            ultima fruta: ${ultimo}<br>
+            quantidade : ${qtd_frutas}<br>
+            total = ${total}`;
+        lista.style.display = "none"
+        nota_fiscal.style.display = "block"
+
+    }
+</script>

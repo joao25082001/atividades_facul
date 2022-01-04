@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>consulta cep</title>
+</head>
+<body>
+  <input id="input_cep" type="text"  placeholder="digite um cep" id="">
+  <button onclick="consulta()"> consulta</button> <br>
+  <div id=texto></div>
+</body>
+</html>
+<script>
+    function consulta(){
+        var cep= input_cep.value;
+        console.log(cep)
+        fetch(`https://viacep.com.br/ws/${cep}/json/`,{
+            method:"GET",
+            node: "cors"
+        })
+        .then(function (resposta) {
+            console.log(resposta)
+            resposta.json().then(function (data) {
+                console.log(data.bairro);
+                texto.innerHTML= `rua:${data.logradouro}<br>
+                bairro:${data.bairro}<br>
+                cidade:${data.localidade}<br>
+                estado:${data.uf}<br>`
+               
+                
+            })
+            console.log(resposta);
+            
+            
+        }).catch(function (erro) {
+            console.log(erro)
+            texto.innerHTML=`esse endereço não existe brother`
+            texto.style.color=`red`            
+        })
+  
+        
+    }
+</script>
